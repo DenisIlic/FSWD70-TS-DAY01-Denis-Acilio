@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+						<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"crossorigin="anonymous">
+						<title>Typescript challange</title>
+<style>
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+  opacity: 0.8;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color:  black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  opacity: 1;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: grey;
+  opacity: 1;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: auto;
+  background-color: black;
+  opacity: 0.5;
+}
+
+p{
+  float: right;
+  color: white;
+ }
+
+ h3{
+  color: white;
+ }
+
+ body{
+ 	background: url('https://media-cdn.tripadvisor.com/media/photo-s/0f/86/35/8a/la-pergola.jpg') no-repeat center center fixed;
+ 	background-size: cover;
+ }
+</style>
+
+</head>
+<body class="bg-dark">
+
+<header>
+	<div class="container">
+		<div class="col bg-light d-flex justify-content-center">
+			<h1 class="text-dark">Trattoria</h1>
+		</div>
+	</div>
+</header>
+
+<div class="container">
+	<div class="tab">
+		<button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">LA PERGOLA</button>
+		<button class="tablinks" onclick="openCity(event, 'Antipasto')">Antipasto</button>
+  		<button class="tablinks" onclick="openCity(event, 'Pizza')">Pizza</button>
+  		<button class="tablinks" onclick="openCity(event, 'Pasta')">Pasta</button>
+  		<button class="tablinks" onclick="openCity(event, 'Insalata')">Insalata</button>
+  		<button class="tablinks" onclick="openCity(event, 'Dolce')">Dolce</button>
+  		<button class="tablinks" onclick="openCity(event, 'Bevanda')">Bevanda</button>
+	</div>
+
+	<div id="Home" class="tabcontent">
+  		<h3>LA PERGOLA</h3>
+  		<br>
+  		<p class="txt">A unique view of the eternal city opens up to the guests of one of the most beautiful restaurants in the world. Under the guidance of Heinz Beck it has become a temple of international gastronomy, historically the first and still today the only three-star hotel in the capital.
+		We remind our guests that a lot of information regarding your experience at La Pergola can be found in our Frequently Asked Questions (FAQ) .
+		We inform our guests that La Pergola will be closed for holidays from 4 to 26 August 2019.</p>
+		
+
+	<div id="Antipasto" class="tabcontent">
+  		<h3>Antipasto</h3>
+  		<img src="test.jpg">
+  		<p class="txt">Hello</p>
+	</div>
+
+	<div id="Pizza" class="tabcontent">
+  		<h3>Pizza</h3>
+	</div>
+
+	<div id="Pasta" class="tabcontent">
+  		<h3>Pasta</h3>
+  		<p class="txt">Hi</p>
+	</div>
+
+	<div id="Insalata" class="tabcontent">
+  		<h3>Insalata</h3>
+	</div>
+
+	<div id="Dolce" class="tabcontent">
+  		<h3>Dolce</h3>
+	</div>
+
+	<div id="Bevanda" class="tabcontent">
+  		<h3>Bevanda</h3>
+	</div>
+</div>
+
+
+<footer>
+	<div class="container">
+		<div class="row bg-dark d-flex justify-content-center pb-5">
+		</div>
+	</div>
+</footer>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
